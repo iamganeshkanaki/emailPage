@@ -1,0 +1,16 @@
+<form #myForm="ngForm" (ngSubmit)="submitData(myForm)">
+    <label for="field1">Field 1:</label>
+    <input type="text" id="field1" name="field1" ngModel>
+  
+    <label for="field2">Field 2:</label>
+    <input type="text" id="field2" name="field2" ngModel>
+
+    <label for="field3">Field 3:</label>
+    <input type="text" id="field3" name="field3" ngModel>
+  
+    <label for="field4">Field 4:</label>
+    <input type="text" id="field4" name="field4" ngModel>
+  
+    <button type="submit">Submit</button>
+  </form>
+  <a routerLink="/">Home</a>
