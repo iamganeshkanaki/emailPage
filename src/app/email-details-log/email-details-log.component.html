@@ -1,0 +1,69 @@
+<div class="container">
+    <form class="example-form">
+        <mat-form-field *ngIf="from">
+            <mat-label class="from">From Email</mat-label>
+            <input class="from" type="text" placeholder="Enter email" aria-label="Email" [(ngModel)]="from"
+                [ngModelOptions]="{standalone: true}" [matAutocomplete]="auto" matInput disabled>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option [value]="from">
+                    {{ from }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field> <br />
+        <mat-form-field>
+            <mat-label class="to">to Email</mat-label>
+            <input class="to" type="text" placeholder="Enter email" aria-label="Email" [(ngModel)]="to"
+                [ngModelOptions]="{standalone: true}" [matAutocomplete]="auto" matInput disabled>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option [value]="to">
+                    {{ to }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field> <br />
+
+        <mat-form-field *ngIf="cc">
+            <mat-label class="cc">cc</mat-label>
+            <input class="cc" type="text" placeholder="Enter email" aria-label="Email" [(ngModel)]="cc"
+                [ngModelOptions]="{standalone: true}" [matAutocomplete]="auto" matInput disabled>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option [value]="cc">
+                    {{ cc }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field> <br />
+
+        <mat-form-field *ngIf="bcc">
+            <mat-label class="bcc">bcc</mat-label>
+            <input class="bcc" type="text" placeholder="Enter email" aria-label="Email" [(ngModel)]="bcc"
+                [ngModelOptions]="{standalone: true}" [matAutocomplete]="auto" matInput disabled>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option [value]="bcc">
+                    {{ bcc }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field> <br />
+
+        <mat-form-field *ngIf="subject">
+            <mat-label class="subject">Subject</mat-label>
+            <input class="subject" type="text" placeholder="Enter email" aria-label="Email" [(ngModel)]="subject"
+                [ngModelOptions]="{standalone: true}" [matAutocomplete]="auto" matInput disabled>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option [value]="subject">
+                    {{ subject }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field> <br />
+
+
+
+        <mat-form-field>
+            <mat-label class="txt">Body</mat-label>
+            <textarea matInput class="txt" [(ngModel)]="subject" name="subject"
+                disabled></textarea>
+        </mat-form-field>
+
+
+        <!-- <textarea name="txt" class="txt" placeholder="Enter a description" [(ngModel)]="description" name="description" ></textarea> -->
+    </form>
+    <button (click)="back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+</div>
