@@ -5,11 +5,11 @@ import { CommonModule, Location } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-email-details-log',
   standalone: true,
-  imports: [FormsModule,CommonModule,MatInputModule,MatSelectModule,MatAutocompleteModule],
+  imports: [FormsModule,CommonModule,MatInputModule,MatSelectModule,MatAutocompleteModule,MatIconModule],
   templateUrl: './email-details-log.component.html',
   styleUrl: './email-details-log.component.css'
 })
